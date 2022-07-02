@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
+
 /**
  * main - Entyr point
  * Description: prints two digits combination
@@ -29,5 +30,3 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
-
-
