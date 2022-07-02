@@ -1,7 +1,5 @@
 #include <stdio.h>
-
 #include <unistd.h>
-
 /**
  * main - Entry point
  * Description: prints numbers
@@ -24,3 +22,4 @@ int main(void)
 
 	putchar('\n');
 	return (0);
+}
