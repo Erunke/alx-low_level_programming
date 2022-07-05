@@ -1,12 +1,22 @@
-#include <unistd.h>
+#include <main.h>
 
 /**
  * main - Entry point
- * Description: prints _putchar followed by newline
- * Return: 0
+ * Description: prints '_putchar \n'
+ * Return: Always 0 (success)
  */
 
-int _putchar(char c)
+int main(void)
 {
-	return (write(1, &c, 1));
+char str[] = "_putchar\n";
+int i = 0;
+
+while (str[i] != '\0')
+	{
+	char c = str[i];
+
+	_putchar(c);
+	i++;
+	}
+return (0);
 }
