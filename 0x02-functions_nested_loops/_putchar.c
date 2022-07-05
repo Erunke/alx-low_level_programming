@@ -1,7 +1,7 @@
 #include <unistd.h>
 
 /**
- * Main: Entry point
+ * Main - Entry point
  * Description: prints _putchar, followed by a new line
  * Return: 0
  */
