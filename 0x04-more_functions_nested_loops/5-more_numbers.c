@@ -28,5 +28,4 @@ void more_numbers(void)
 		i++;
 	}
 }
-Footer
-© 2022 GitHub, Inc.i
+
