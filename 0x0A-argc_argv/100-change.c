@@ -1,44 +1,50 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
-#include "holberton.h"
 
 /**
- * main - Program that takes in all integer arguments and returns the sum
- * @argc: Number of command line arguments
- * @argv: Array name
- * Return: 1 if a non-integer is among the passed in arguments, 0 otherwise
- */
-
+  * main - prints the minimum number of coins to make change.
+  * @argc: argument counter.
+  * @argv: argument vector.
+  * Return: return 1 if error, else return 0.
+  */
 int main(int argc, char *argv[])
 {
-	int i, j, length, sum;
-	char *ptr;
+	int change, num;
 
-	if (argc < 2)
-	printf("0\n");
+	change = 0;
+
+	if (argc == 2)
+	{
+		num = atoi(argv[1]);
+		if (num > 0)
+		{
+			for (; num >= 25; change++)
+			{
+				num = num - 25;
+			}
+			for (; num >= 10; change++)
+			{
+				num = num - 10;
+			}
+			for (; num >= 5; change++)
+			{
+				num = num - 5;
+			}
+			for (; num >= 2; change++)
+			{
+				num = num - 2;
+			}
+			for (; num >= 1; change++)
+			{
+				num = num - 1;
+			}
+		}
+		printf("%d\n", change);
+		return (0);
+	}
 	else
 	{
-		sum = 0;
-		for (i = 1; i < argc; i++)
-		{
-			ptr = argv[i];
-			length = strlen(ptr);
-
-			for (j = 0; j < length; j++)
-			{
-				if (isdigit(*(ptr + j)) == 0)
-				{
-					printf("Error\n");
-					return (1);
-				}
-			}
-
-			sum += atoi(argv[i]);
-		}
-
-		printf("%d\n", sum);
+		printf("Error\n");
+		return (1);
 	}
-	return (0);
 }
